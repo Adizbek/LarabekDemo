@@ -1,0 +1,3 @@
+[submodule "packages/Adizbek/Larabek"]
+	path = packages/Adizbek/Larabek
+	url = https://github.com/Adizbek/Larabek
