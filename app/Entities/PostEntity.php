@@ -29,9 +29,9 @@ class PostEntity extends Entity
         return [
             (new TextField('id'))->notOnForm(),
             (new TextField('title'))->sortable(),
-            new TextField('text'),
-            new TextField('views'),
-            new TextField('published'),
+            (new TextField('text')),
+            (new TextField('views')),
+            (new TextField('published')),
             (new TextField('author_id'))->onlyOnForm()->onSheet()->sortable(),
         ];
     }
