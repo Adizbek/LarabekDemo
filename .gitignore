@@ -12,6 +12,7 @@ npm-debug.log
 yarn-error.log
 
 .idea
+public/vendor
 public/larabek
 public/css
 public/js

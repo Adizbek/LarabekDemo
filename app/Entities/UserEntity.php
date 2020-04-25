@@ -29,14 +29,14 @@ class UserEntity extends Entity
     public function getFields(): array
     {
         return [
-            (new TextField('id'))->sortable(),
-            (new TextField('first_name'))->sortable(),
-            (new TextField('last_name'))->sortable(),
-            (new TextField('age'))->sortable(),
-            (new TextField('tel')),
-            (new TextField('email')),
-            (new TextField('avatar')),
-            (new TextField('confirmed')),
+            TextField::make('id')->sortable(),
+            TextField::make('first_name')->sortable(),
+            TextField::make('last_name')->sortable(),
+            TextField::make('age')->sortable(),
+            TextField::make('tel'),
+            TextField::make('email'),
+            TextField::make('avatar'),
+            TextField::make('confirmed'),
         ];
     }
 
