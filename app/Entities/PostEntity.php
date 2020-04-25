@@ -3,11 +3,15 @@
 namespace App\Entities;
 
 use Adizbek\Larabek\Core\Entity\Entity;
+use Adizbek\Larabek\Core\Fields\BelongsTo;
 use Adizbek\Larabek\Core\Fields\TextField;
 use App\Post;
 
 class PostEntity extends Entity
 {
+
+    protected $with = ['author'];
+
     /**
      * @inheritDoc
      */
@@ -32,7 +36,8 @@ class PostEntity extends Entity
             (new TextField('text')),
             (new TextField('views')),
             (new TextField('published')),
-            (new TextField('author_id'))->onlyOnForm()->onSheet()->sortable(),
+            (new BelongsTo('Author', 'author', UserEntity::class))
+                ->displayBy('first_name'),
         ];
     }
 }
