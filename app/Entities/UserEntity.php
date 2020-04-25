@@ -29,10 +29,11 @@ class UserEntity extends Entity
     public function getFields(): array
     {
         return [
-            new TextField('id'),
-            new TextField('email'),
-            new TextField('name'),
-            new TextField('confirmed'),
+            (new TextField('id'))->sortable(),
+            (new TextField('email'))->sortable(),
+            (new TextField('name'))->sortable(),
+            (new TextField('confirmed'))->sortable(),
         ];
     }
+
 }
