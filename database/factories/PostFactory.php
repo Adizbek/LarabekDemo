@@ -9,6 +9,7 @@ $factory->define(Post::class, function (Faker $faker) {
     return [
         "title" => $faker->title,
         "text" => $faker->text,
-        "author_id" => \App\User::inRandomOrder()->first()
+        "author_id" => \App\User::inRandomOrder()->first(),
+        "views" => $faker->numberBetween('1', '10000'),
     ];
 });

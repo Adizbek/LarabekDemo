@@ -17,6 +17,8 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('text');
+            $table->integer('views');
+            $table->boolean('published')->default(false);
             $table->bigInteger('author_id');
             $table->timestamps();
         });
