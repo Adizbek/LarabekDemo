@@ -32,6 +32,7 @@ class UserEntity extends Entity
             (new TextField('id'))->sortable(),
             (new TextField('email'))->sortable(),
             (new TextField('name'))->sortable(),
+            (new TextField('avatar')),
             (new TextField('confirmed'))->sortable(),
         ];
     }
