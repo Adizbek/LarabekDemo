@@ -31,13 +31,12 @@ class PostEntity extends Entity
     public function getFields(): array
     {
         return [
-            (new TextField('id'))->notOnForm(),
-            (new TextField('title'))->sortable(),
-            (new TextField('text')),
-            (new TextField('views')),
-            (new TextField('published')),
-            (new BelongsTo('Author', 'author', UserEntity::class))
-                ->displayBy('first_name'),
+            TextField::make('id')->notOnForm(),
+            TextField::make('title')->sortable(),
+            TextField::make('text'),
+            TextField::make('views'),
+            TextField::make('published'),
+            BelongsTo::make('Author', 'author', UserEntity::class)->displayBy('first_name')
         ];
     }
 }
