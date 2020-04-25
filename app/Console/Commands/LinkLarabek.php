@@ -39,7 +39,12 @@ class LinkLarabek extends Command
     {
         //
 
-        if (file_exists(public_path('storage'))) {
+        if(!file_exists(public_path('vendor'))) {
+            mkdir(public_path('vendor'));
+        }
+
+
+        if (file_exists(public_path('vendor/larabek'))) {
             return $this->error('The "public/storage" directory already exists.');
         }
 
